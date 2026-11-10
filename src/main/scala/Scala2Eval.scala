@@ -54,8 +54,8 @@ private object Scala2Eval extends App {
   implicit val env: Env = Map("x" -> 17, "y" -> 10, "z" -> 23)
 
   // Need to explicitly give this one because we have given envScala3 below
-  val eval1 = eval(exp1)(env)
-  val eval2 = eval(exp1)(env)
+  val eval1 = eval(exp1)(using env)
+  val eval2 = eval(exp1)(using env)
 
   println(eval1)
 
